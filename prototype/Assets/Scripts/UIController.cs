@@ -24,18 +24,18 @@ public class UIController : MonoBehaviour
     public Image secondSpell;
     private float sCoolDown;
     private float sCurrentTimer;
-
-   // public Image thirdSpell;
-   // private float tCoolDown;
-   // private float tCurrentTimer;
+    private CheatDeathSelf cheatDeath;
+    public Image thirdSpell;
+    private float tCoolDown;
+    private float tCurrentTimer;
 
 
     private void Start()
     {
         fireBall = GetComponent<FireBallSpell>();
         staffAttack = GetComponent<StaffAttack>();
+        cheatDeath = GetComponent<CheatDeathSelf>();
         charStats = GetComponent<CharacterStats>();
-
     }
 
     private void Update()
@@ -53,9 +53,14 @@ public class UIController : MonoBehaviour
         sCoolDown = staffAttack.spellCooldown;
         sCurrentTimer = staffAttack.timer;
 
+        tCoolDown = cheatDeath.spellCooldown;
+        tCurrentTimer = cheatDeath.timer;
+
+
         //Debug.Log(currentHealth.ToString() + maxHealth.ToString());
         firstSpell.fillAmount = 1 - fCurrentTimer / fCoolDown;
         secondSpell.fillAmount = 1 - sCurrentTimer / sCoolDown;
+        thirdSpell.fillAmount = 1 - tCurrentTimer / tCoolDown;
         healthBar.fillAmount = (float) (currentHealth) / (float) maxHealth;
         expBar.fillAmount = (float) (currentExp) / (float) maxExp;
     }

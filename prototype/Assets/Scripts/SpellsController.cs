@@ -14,12 +14,16 @@ public class SpellsController : MonoBehaviour
     private StaffAttack staffAttack;
     public KeyCode staffAttackKey;
 
+    private CheatDeathSelf cheatDeath;
+    public KeyCode cheatDeathKey;
+
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         fireBallSpell = GetComponent<FireBallSpell>();
         staffAttack = GetComponent<StaffAttack>();
+        cheatDeath = GetComponent<CheatDeathSelf>();
     }
 
     // Update is called once per frame
@@ -36,6 +40,12 @@ public class SpellsController : MonoBehaviour
             if (Input.GetKeyDown(staffAttackKey))
             {
                 staffAttack.PerformAttack();
+                timer = generalCooldown;
+            }
+
+            if (Input.GetKeyDown(cheatDeathKey))
+            {
+                cheatDeath.castSpell();
                 timer = generalCooldown;
             }
         }

@@ -117,12 +117,22 @@ public class CharacterStats : MonoBehaviour
         return baseHealthRegen + strength * 0.2;
     }
 
-   // public double GetTotalAttackSpeed()
-   // {
-   //     double attackSpeed = stats.Find(x => x.StatType == "attack speed").GetCalculatedStatValue();
-   //     int agility = stats.Find(x => x.StatType == "agility").GetCalculatedStatValue();
-   //     return attackSpeed + agility * 0.5;
-   // }
+    // public double GetTotalAttackSpeed()
+    // {
+    //     double attackSpeed = stats.Find(x => x.StatType == "attack speed").GetCalculatedStatValue();
+    //     int agility = stats.Find(x => x.StatType == "agility").GetCalculatedStatValue();
+    //     return attackSpeed + agility * 0.5;
+    // }
+
+    public double heal(double health)
+    {
+        this.currentHealth += health;
+        if (currentHealth > this.GetMaxHealth())
+        {
+            this.currentHealth = this.GetMaxHealth();
+        }
+        return currentHealth;
+    }
 
     public double GetTotalSpellPower()
     {

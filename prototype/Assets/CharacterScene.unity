@@ -2072,8 +2072,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.033333335, y: 0.033333335, z: 1}
   m_Children:
-  - {fileID: 1995189122}
   - {fileID: 1341824479}
+  - {fileID: 1995189122}
   m_Father: {fileID: 438950771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2758,16 +2758,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341824478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.005421248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1063127420}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68.8, y: -210.6}
+  m_AnchoredPosition: {x: 68.80334, y: -210.6047}
   m_SizeDelta: {x: 61, y: 61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341824480
@@ -4455,7 +4455,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1063127420}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8059,6 +8059,7 @@ GameObject:
   - component: {fileID: 6771088389095191186}
   - component: {fileID: 6771088389095191187}
   - component: {fileID: 6771088389095191189}
+  - component: {fileID: 6771088389095191184}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -8141,6 +8142,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cba6ed8c75c8b4095f16c3c11d244a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6771088389095191184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771088389095191178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c464ba0205a7c449aa0e91b696884ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healPercentage: 80
+  spellCooldown: 30
+  timer: 0
 --- !u!114 &6771088389095191185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8156,6 +8172,7 @@ MonoBehaviour:
   generalCooldown: 0.5
   fireBallSpellKey: 119
   staffAttackKey: 113
+  cheatDeathKey: 101
 --- !u!114 &6771088389095191186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8207,6 +8224,7 @@ MonoBehaviour:
   expBar: {fileID: 1279526177}
   firstSpell: {fileID: 1370730365}
   secondSpell: {fileID: 2082875797}
+  thirdSpell: {fileID: 1341824480}
 --- !u!1 &6771088389165973014
 GameObject:
   m_ObjectHideFlags: 0

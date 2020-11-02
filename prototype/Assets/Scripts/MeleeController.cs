@@ -12,7 +12,7 @@ public class MeleeController : MonoBehaviour
     public float MOVEMENT_SPEED = 3f;
     public float ATTACK_SPEED = 1.5f;
     // range is a magnitude of 1
-    public float ATTACK_RANGE = 1f;
+    public float ATTACK_RANGE = 1.5f;
     public float ATTACK_DAMAGE = 40f;
     public static float MAX_HEALTH = 60f;
     public float currentHealth;

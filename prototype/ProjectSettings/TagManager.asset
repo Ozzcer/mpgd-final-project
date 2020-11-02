@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
+  - StandardCollider1
+  - StandardCollider2
+  - EndCollider
   layers:
   - Default
   - TransparentFX

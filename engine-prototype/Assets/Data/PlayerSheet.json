@@ -1,0 +1,13 @@
+{"Actors":[{
+    "BasicPlayer":{
+        baseHealth
+        baseStrength
+        baseAgility
+        baseIntelligence
+        baseMoveSpeed
+        baseAttackSpeed
+    },
+    "BasicMeleeEnemy":{
+
+    }
+}]}
